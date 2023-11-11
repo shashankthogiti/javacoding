@@ -1,0 +1,8 @@
+public class Strings1 {
+  public static void main(String []args) {
+    StringBuilder sb = new StringBuilder("Tony");
+    System.out.println(sb);
+    System.out.println(sb.charAt(0)):                          //finding characetr at index __ 
+
+  }
+}
