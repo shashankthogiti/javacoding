@@ -1,0 +1,15 @@
+public class Strings5 {
+  public static void main(String []args) {
+    StringBuilder sb = new StringBuilder("h");
+    sb.append("e");
+    sb.append("l");
+    sb.append("l");
+    sb.append("o");
+  }
+}                                                 
+
+/* append() is used to add the String to the String
+
+syntax: sb.append(charSequence s);
+
+*/
