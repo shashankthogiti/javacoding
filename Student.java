@@ -1,31 +1,41 @@
-public class Student {
+package collections2;
 
+public class Student implements Comparable<Student> {
+	private int id;
 	private String name;
-	private int[] marks;
 
-	public Student(String name, int[] marks) {
+	public Student(int id, String name) {
+		super();
+		this.id = id;
 		this.name = name;
-		this.marks = marks;
-
 	}
 
-	public int getNumberOfMarks() {
-
-		return marks.length;
+	public int getId() {
+		return id;
 	}
-	public static void main(String[] args) {
-		int[] marks = {99,98,100};
-		
-		Student student = new Student("Ranga", marks);
 
-		int number = student.getNumberOfMarks();
-		System.out.println("number of marks: " + number);
+	public void setId(int id) {
+		this.id = id;
+	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return id + " " + name;
+	}
+
+	@Override
+	public int compareTo(Student that) {
+		return Integer.compare(this.id, that.id); // it is for ascending order
 		/*
-		 * int sum = student.getTotalSumOfMarks(); int maximunMark =
-		 * student.getMaximumMark(); int minimumMark = student.getMinimumMark();
-		 * BigDecimal average = student.getAverageMarks();
+		 * return Integer.compare(that.id, this.id); // this is for decending order
 		 */
 	}
-
 }
